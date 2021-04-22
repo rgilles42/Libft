@@ -56,6 +56,8 @@ int				print_nb_base(t_printf *myptf, char *cs, int sgd, int lon);
 int				display(t_printf *myprintf);
 int				ft_printf(const char *to_parse, ...);
 
+void			ft_error(char *str);
+
 void			ft_bzero(void *s, size_t n);
 void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
