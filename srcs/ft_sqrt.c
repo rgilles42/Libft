@@ -5,12 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgilles <rgilles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 21:08:33 by rgilles           #+#    #+#             */
-/*   Updated: 2020/02/12 21:08:35 by rgilles          ###   ########.fr       */
+/*   Created: 2020/03/31 17:35:07 by rgilles           #+#    #+#             */
+/*   Updated: 2020/03/31 17:35:12 by rgilles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 static double	calculate(double nb, double approx, double prev_approx)
 {

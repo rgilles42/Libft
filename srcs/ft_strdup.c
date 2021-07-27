@@ -18,7 +18,8 @@ char	*ft_strdup(const char *src)
 	int		i;
 
 	i = 0;
-	if (!(dupli = malloc(ft_strlen(src) + 1)))
+	dupli = malloc(ft_strlen(src) + 1);
+	if (!dupli)
 		return (NULL);
 	while (src[i])
 	{

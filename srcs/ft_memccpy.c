@@ -16,10 +16,11 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	char	*copybuffer;
 
-	copybuffer = (char*)dest;
+	copybuffer = (char *)dest;
 	while (n--)
 	{
-		if ((*copybuffer++ = *(char*)(src++)) == (char)c)
+		*copybuffer++ = *(char *)(src++);
+		if (*copybuffer == (char)c)
 			return (copybuffer);
 	}
 	return (0);

@@ -12,12 +12,13 @@
 
 #include <libft.h>
 
-char		*get_line_buffered(char *str, int fd, int *nb_read)
+char	*get_line_buffered(char *str, int fd, int *nb_read)
 {
-	char			buf[BUFFER_SIZE + 1];
-	char			*tmp;
+	char	buf[BUFFER_SIZE + 1];
+	char	*tmp;
 
-	while ((*nb_read = read(fd, buf, BUFFER_SIZE)) > 0)
+	*nb_read = read(fd, buf, BUFFER_SIZE);
+	while (*nb_read > 0)
 	{
 		buf[*nb_read] = '\0';
 		if (str == NULL)
@@ -34,9 +35,9 @@ char		*get_line_buffered(char *str, int fd, int *nb_read)
 	return (str);
 }
 
-int			inject_line(char *str, char **line)
+int		inject_line(char *str, char **line)
 {
-	int				i;
+	int	i;
 
 	i = 0;
 	if (str != NULL)
@@ -61,11 +62,11 @@ int			inject_line(char *str, char **line)
 	}
 }
 
-char		*rest_of_buffer(char *str)
+char	*rest_of_buffer(char *str)
 {
-	int				i;
-	int				str_len;
-	char			*tmp;
+	int		i;
+	int		str_len;
+	char	*tmp;
 
 	i = 0;
 	str_len = ft_strlen(str);
@@ -83,11 +84,11 @@ char		*rest_of_buffer(char *str)
 	return (str);
 }
 
-int			get_next_line(int fd, char **line)
+int		get_next_line(int fd, char **line)
 {
-	int				nb_read;
-	static char		*str[2560];
-	int				more_in_buffer;
+	int			nb_read;
+	static char	*str[2560];
+	int			more_in_buffer;
 
 	if (read(fd, str[fd], 0) || line == NULL || BUFFER_SIZE == 0)
 		return (-1);

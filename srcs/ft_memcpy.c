@@ -16,12 +16,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*copybuffer;
 
-	copybuffer = (char*)dest;
+	copybuffer = (char *)dest;
 	if (!src || !dest)
 		return (NULL);
 	while (n--)
 	{
-		*copybuffer++ = *(char*)(src++);
+		*copybuffer++ = *(char *)(src++);
 	}
 	return (dest);
 }

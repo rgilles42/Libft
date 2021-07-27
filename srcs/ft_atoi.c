@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+int	oob_error(int sign)
+{
+	if (sign == 1)
+		return (-1);
+	return (0);
+}
+
 int	ft_atoi(const char *nptr)
 {
 	unsigned int	result;
@@ -38,5 +45,5 @@ int	ft_atoi(const char *nptr)
 	if ((result == (unsigned int)INT_MAX + 1 && sign == -1)
 		|| result <= INT_MAX)
 		return (sign * result);
-	return (sign == 1 ? -1 : 0);
+	return (oob_error(sign));
 }

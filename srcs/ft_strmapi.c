@@ -17,7 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*toret;
 	unsigned int	i;
 
-	if (!s || !(toret = (char*)malloc(ft_strlen(s) + 1)))
+	toret = (char *)malloc(ft_strlen(s) + 1);
+	if (!s || !toret)
 		return (NULL);
 	i = -1;
 	while (s[++i])

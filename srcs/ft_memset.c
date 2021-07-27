@@ -16,7 +16,7 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*copybuffer;
 
-	copybuffer = (unsigned char*)s;
+	copybuffer = (unsigned char *)s;
 	while (n-- > 0)
 		*copybuffer++ = (unsigned char)c;
 	return (s);

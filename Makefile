@@ -21,8 +21,8 @@ SRCSF	= 	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c
 			ft_lstadd_front.c ft_lstsize.c ft_lstadd_back.c ft_lstlast.c ft_lstdelone.c\
 			ft_lstiter.c ft_lstclear.c ft_lstmap.c ft_putnbr_unsigned_fd.c \
 			ft_putnbr_uns.c ft_nbdigits_base.c ft_putnbr_uns_base_fd.c \
-			ft_putnbr_uns_base.c ft_printf.c launchpad.c printc.c prints.c printnb.c \
-			get_next_line.c ft_isspace.c ft_realloc.c ft_error.c
+			ft_putnbr_uns_base.c get_next_line.c ft_isspace.c ft_realloc.c \
+			ft_error.c ft_split_free.c
 SRCDIR	=	srcs/
 INDIR	=	includes/
 CC		=	gcc

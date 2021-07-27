@@ -19,8 +19,8 @@ char	*ft_strrchr(const char *str, int c)
 	toreturn = 0;
 	while (*str)
 		if (*str++ == (char)c)
-			toreturn = (char*)str - 1;
+			toreturn = (char *)str - 1;
 	if (*str == (char)c)
-		toreturn = (char*)str;
+		toreturn = (char *)str;
 	return (toreturn);
 }

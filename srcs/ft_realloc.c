@@ -18,8 +18,9 @@ void	*ft_realloc(void *ptr, int size, int newsize)
 	char	*new;
 	int		i;
 
-	str = (char*)ptr;
-	if (!(new = (char*)malloc(newsize)))
+	str = (char *)ptr;
+	new = (char *)malloc(newsize);
+	if (!new)
 	{
 		if (ptr && size != 0)
 			free(ptr);

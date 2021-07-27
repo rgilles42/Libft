@@ -14,7 +14,7 @@
 
 int	ft_nbdigits_base(unsigned long long int nb, int base)
 {
-	int i;
+	int	i;
 
 	if (nb == 0)
 		return (1);

@@ -26,36 +26,6 @@ typedef	struct	s_list
 	struct s_list	*next;
 }				t_list;
 
-typedef struct	s_printf
-{
-	va_list			args;
-	unsigned int	i;
-	unsigned int	nbwritten;
-	char			minus;
-	char			zero;
-	int				field_len;
-	int				prec;
-	char			conv;
-	int				is_l;
-}				t_printf;
-
-typedef struct	s_number
-{
-	unsigned long long	number;
-	int					nbd;
-}				t_nb;
-
-void			init(t_printf *myprintf);
-void			get_parsing_params(const char *to_parse, t_printf *myptf);
-int				complete_field_len(t_printf *myprintf, int nbwritten);
-
-int				print_c(t_printf *myprintf, char forcechar);
-int				print_s(t_printf *myprintf);
-int				print_nb_base(t_printf *myptf, char *cs, int sgd, int lon);
-
-int				display(t_printf *myprintf);
-int				ft_printf(const char *to_parse, ...);
-
 void			ft_error(char *str);
 
 void			ft_bzero(void *s, size_t n);
@@ -91,6 +61,7 @@ void			*ft_realloc(void *ptr, int size, int newsize);
 char			*ft_strdup(const char *src);
 
 char			**ft_split(char const *s, char c);
+int				free_split(char **split);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strtrim(char const *s1, char const *set);

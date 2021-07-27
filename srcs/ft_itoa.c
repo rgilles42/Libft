@@ -17,7 +17,7 @@ void	setdims(size_t *nbchar, unsigned int *templ, unsigned int *abs, int n)
 	*nbchar = 1;
 	*templ = 1;
 	if (n < 0)
-		*abs = (unsigned int)-n;
+		*abs = (unsigned int) -n;
 	else
 		*abs = (unsigned int)n;
 	while (*abs / *templ >= 10)
@@ -39,7 +39,8 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		flip = 1;
 	setdims(&nbchar, &templ, &abs, n);
-	if (!(toret = (char*)malloc(nbchar + flip + 1)))
+	toret = (char *)malloc(nbchar + flip + 1);
+	if (toret)
 		return (NULL);
 	toret[nbchar + flip] = 0;
 	if (flip)

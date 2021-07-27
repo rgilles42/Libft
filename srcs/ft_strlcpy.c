@@ -23,7 +23,8 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size)
 	{
 		while (--nleft != 0)
 		{
-			if ((*dest++ = *src++) == '\0')
+			*dest++ = *src++;
+			if (*dest == '\0')
 				break ;
 		}
 	}

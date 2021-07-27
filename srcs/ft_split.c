@@ -68,7 +68,8 @@ static void	fill(char const *s, char ***dst, char c, int nbstrings)
 		k = 0;
 		while (s[i] == c)
 			i++;
-		if (!(dst[0][j] = (char *)malloc(charscount(s, c, i) + 1)))
+		dst[0][j] = (char *)malloc(charscount(s, c, i) + 1);
+		if (!dst[0][j])
 		{
 			free_all(*dst, j);
 			*dst = NULL;
@@ -89,7 +90,8 @@ char		**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	nbstrings = stringscount(s, c);
-	if (!(dst = (char **)malloc(sizeof(char *) * (nbstrings + 1))))
+	dst = (char **)malloc(sizeof(char *) * (nbstrings + 1));
+	if (!dst)
 		return (NULL);
 	dst[nbstrings] = NULL;
 	fill(s, &dst, c, nbstrings);

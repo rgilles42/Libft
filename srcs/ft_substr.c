@@ -18,14 +18,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		i;
 
 	i = 0;
-	if (!s || !(toreturn = (char*)malloc(len + 1)))
+	toreturn = (char *)malloc(len + 1);
+	if (!s || !toreturn)
 		return (NULL);
 	if (start < ft_strlen(s))
+	{
 		while (s[start + i] && len--)
 		{
 			toreturn[i] = s[start + i];
 			i++;
 		}
+	}
 	toreturn[i] = 0;
 	return (toreturn);
 }
