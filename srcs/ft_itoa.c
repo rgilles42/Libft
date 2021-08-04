@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 		flip = 1;
 	setdims(&nbchar, &templ, &abs, n);
 	toret = (char *)malloc(nbchar + flip + 1);
-	if (toret)
+	if (!toret)
 		return (NULL);
 	toret[nbchar + flip] = 0;
 	if (flip)
