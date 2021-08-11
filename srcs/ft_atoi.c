@@ -14,6 +14,7 @@
 
 int	oob_error(int sign)
 {
+	errno = ERANGE;
 	if (sign == 1)
 		return (-1);
 	return (0);

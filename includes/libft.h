@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <fcntl.h>
+# include <errno.h>
 # define BUFFER_SIZE 100
 
 typedef	struct	s_list
