@@ -35,7 +35,7 @@ char	*get_line_buffered(char *str, int fd, int *nb_read)
 	return (str);
 }
 
-int		inject_line(char *str, char **line)
+int	inject_line(char *str, char **line)
 {
 	int	i;
 
@@ -84,7 +84,7 @@ char	*rest_of_buffer(char *str)
 	return (str);
 }
 
-int		get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	int			nb_read;
 	static char	*str[2560];

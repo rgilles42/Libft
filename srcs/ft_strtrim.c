@@ -23,7 +23,7 @@ char const	*is_in_set(char c, char const *set)
 	return (NULL);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;

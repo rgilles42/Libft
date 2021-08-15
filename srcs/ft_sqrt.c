@@ -17,7 +17,7 @@ static double	calculate(double nb, double approx, double prev_approx)
 	return (calculate(nb, (approx + nb / approx) / 2, approx));
 }
 
-double			ft_sqrt(double nb)
+double	ft_sqrt(double nb)
 {
 	if (!nb)
 		return (0);

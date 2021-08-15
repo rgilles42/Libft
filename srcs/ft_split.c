@@ -82,7 +82,7 @@ static void	fill(char const *s, char ***dst, char c, int nbstrings)
 	}
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**dst;
 	int		nbstrings;
